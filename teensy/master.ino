@@ -14,15 +14,15 @@ typedef union bit_to_float
 
 void setup()
 {
-  Wire.begin();                         // join i2c bus
-  Serial.begin(9600);                    // start serial for output
+  Wire.begin();         // join i2c bus
+  Serial.begin(9600);   // start serial for output
   readCounter = 0;
   reqCounter = 0;
 }
 
 void loop()
 {
-  Wire.beginTransmission(0xac);
+  Wire.beginTransmission(0xac);   // set adress
   if(reqCounter == 7) reqCounter = 0;
   switch(reqCounter){
     case 0 : Wire.write(0x01); break;
