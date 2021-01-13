@@ -91,7 +91,7 @@ void loop()
     Serial.print("\tdata2:");
     Serial.println(AOS);*/
     /*--------AOA, AOS--------*/
-    //updateData();
+    updateData();
 
     delay(1000);
 }
